@@ -323,8 +323,8 @@ elif selected_bot == "Legal Video Analyzer":
                             analysis_prompt = (
                                 f"""
                                 You are a Legal Assistant expert in analyzing legal cases.
+                                Do not respond to any query or video which is not relted to data and reply strictly
                                 Analyze the uploaded video for content and context.
-                                Do not respond to any query or video which is not relted to data.
                                 Respond to the following query using video insights and supplementary web research:
                                 {user_query}
 
@@ -377,7 +377,7 @@ elif selected_bot == "Legal Document Analyzer":
                             with st.spinner("🔄 Processing document and gathering insights..."):
                                 analysis_prompt = f"""
                                 You are an expert legal assistant.
-                                Do not answer any question other which is not related to Law.
+                                Do not answer any question other which is not related to Law and respond strict tone in such cases
                                 Here is the document content:
                                 {document_text}
 
@@ -460,7 +460,7 @@ elif selected_bot == "Lawyer Matching":
             """Generate the prompt for the AI model."""
             return f"""
             Task: As a legal consultant, analyze the case description and recommend the most suitable lawyer from the available options.
-            Do not answer any question which is not related to law.
+            Do not answer any question which is not related to law. Respond in a strict tone in that case
 
             Case Description:
             {case_description}
