@@ -324,6 +324,7 @@ elif selected_bot == "Legal Video Analyzer":
                                 f"""
                                 You are a Legal Assistant expert in analyzing legal cases.
                                 Analyze the uploaded video for content and context.
+                                Do not respond to any query or video which is not relted to data.
                                 Respond to the following query using video insights and supplementary web research:
                                 {user_query}
 
@@ -459,6 +460,7 @@ elif selected_bot == "Lawyer Matching":
             """Generate the prompt for the AI model."""
             return f"""
             Task: As a legal consultant, analyze the case description and recommend the most suitable lawyer from the available options.
+            Do not answer any question which is not related to law.
 
             Case Description:
             {case_description}
