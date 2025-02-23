@@ -375,7 +375,8 @@ elif selected_bot == "Legal Document Analyzer":
                         try:
                             with st.spinner("🔄 Processing document and gathering insights..."):
                                 analysis_prompt = f"""
-                                You are an expert legal assistant 
+                                You are an expert legal assistant.
+                                Do not answer any question other which is not related to Law.
                                 Here is the document content:
                                 {document_text}
 
